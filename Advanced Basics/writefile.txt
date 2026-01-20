@@ -1,0 +1,6 @@
+line 1
+line 2
+line 3
+hey I am Palak 
+aur aaj main wapas se Python padhne aa gayi hoon usi energy ke sath
+and I love to learn Python
