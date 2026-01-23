@@ -1,14 +1,19 @@
 class Person:
-    # def__init__
-    name = "Ram"
-    occ = "Developer"
-
+    
+    def __init__(self,n,o):
+        print("Hey I am a person")
+        self.name = n
+        self.occ = o
+    
     def info(self):
         print(f"{self.name} is a {self.occ}")
 
-a = Person()
 
-name = "Divya"
-occ = "HR"
+a = Person("harry ", "Developer")
+b = Person("Divya", "HR")
+
 # print(a.name)
+# a.name = "Divya"
+# a.occ = "HR"
 a.info()
+b.info()
