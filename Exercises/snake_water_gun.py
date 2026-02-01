@@ -5,27 +5,30 @@ matrix = [
     ['L', 'D', 'W'],  # Water row
     ['W', 'L', 'D']   # Gun row
 ]
-# Access: matrix[row][col]
 
-choice_to_index = {'S': 0, 'W': 1, 'G': 2}
-index_to_choice = {0: 'S', 1: 'W', 2: 'G'}
+index_to_choice = {0:"S", 1:"W", 2:"G"}
+choice_to_index = {"S":0, "W":1,"G":2}
 
-player = input("Enter S/W/G: ").upper()
+player = input("Enter The choice S/W/G: ").upper()
+
 if player not in choice_to_index:
-    print("Invalid choice!")
+    print("Invaild Input")
+
 else:
-    player_index = choice_to_index[player]  #is line ka matlab pata karna hai mereko
-    computer_index = random.randint(0, 2)
-    result = matrix[computer_index][player_index]
-    print(f"Computer chose: {index_to_choice[computer_index]}")
-    print(f"You chose: {player}")
+    player_choice = choice_to_index[player]
+    computer = random.randint(0,2)
+    comp_choice = index_to_choice[computer]
+
+    result= matrix[player_choice][computer]  #access [row] [col]
+
+    print(f"You have choosen: {player}")
+    print(f"Agent choosen: {comp_choice}")
+
     if result == 'W':
-        print("Computer wins!")
+        print("You win!!")
+
     elif result == 'L':
-        print("You win!")
+        print("Agent wins!!")
+
     else:
-        print("Draw!")
-
-
-
-
+        print("draw")
