@@ -1,3 +1,0 @@
-import sam
-
-sam.welcome()
